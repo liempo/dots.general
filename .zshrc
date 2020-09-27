@@ -24,9 +24,6 @@ alias bt="bluetoothctl"
 alias ls="ls -l --block-size=M"
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
-# Hide username and host
-prompt_context() {}
-
 # Run 'ls' every 'cd'
 function chpwd() {
     emulate -L zsh
