@@ -28,5 +28,6 @@ xsetroot -cursor_name left_ptr &
 wmname LG3D &
 
 # Autostart applications
+sh ~/.config/polybar/launch.sh &
 run_once sxhkd
 run_once picom restart
