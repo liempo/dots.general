@@ -1,0 +1,45 @@
+#! /bin/sh
+
+# Set number of desktops per monitor
+bspc monitor HDMI-1 -n 0 -d               Home Development
+bspc monitor eDP-1 -n 1 -d                Media Extras
+bspc config border_width                  2
+
+# This creates negative padding equal to window gap so
+# that gaps are shown only between windows and not on desktop edges.
+gap=20
+export gap
+
+bspc config window_gap                  $gap
+bspc config top_padding                 $(($gap / 2))
+bspc config left_padding                $(($gap / 2))
+bspc config right_padding               $(($gap / 2))
+bspc config bottom_padding              $(($gap / 2))
+
+
+# Various settings
+bspc config split_ratio                 0.52
+bspc config border_width                1
+bspc config borderless_monocle          true
+bspc config gapless_monocle             false
+bspc config remove_disabled_monitors    true
+bspc config remove_unplugged_monitors   true
+
+# source the colors.
+. "${HOME}/.cache/wal/colors.sh"
+
+# Merge Xresources
+xrdb -merge ~/.cache/wal/colors.Xresources &
+
+# Set the border colors.
+# bspc config normal_border_color         "$color2"
+# bspc config active_border_color         "$color1"
+# bspc config focused_border_color        "$color15"
+
+# Desktop rules
+bspc rule -a firefox desktop="Home"
+bspc rule -a jetbrains-studio state=pseudo_tiled desktop="Development"
+bspc rule -a GLava desktop=^3 state=fullscreen layer=below sticky=true locked=true border=off
+
+# Launch the autostart script
+~/.config/bspwm/autostart &

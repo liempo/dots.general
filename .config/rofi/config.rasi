@@ -1,0 +1,19 @@
+configuration {
+  font: "Segoe UI 9";
+  padding: 			  20;
+  line-padding: 4;
+  borderwidth: 4;
+  color-enabled: true;
+  hide-scrollbar: true;
+  show-icons:         true;
+  cycle:              true;
+  hide-scrollbar:     true;
+  disable-history:    false;
+  combi-modi:         "drun,run";
+  modi:               "combi";
+  display-drun:       "launch";
+  display-run:        "run";
+  display-combi:      "What do you want?";
+  columns: 3;
+  theme: "~/.cache/wal/colors.rasi";
+}
