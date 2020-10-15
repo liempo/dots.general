@@ -1,0 +1,18 @@
+#!/usr/bin/sh
+
+while (( "$#" )); do
+  case "$1" in
+    -s|--select)
+      scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+      shift
+      ;;
+    -f|--fullscreen)
+      scrot $HOME/'Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png'
+      shift
+      ;;
+    -*|--*=) # unsupported flags
+      echo "Error: Unsupported flag $1" >&2
+      exit 1
+      ;;
+  esac
+done

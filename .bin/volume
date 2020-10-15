@@ -1,0 +1,31 @@
+#! /bin/sh
+
+# Get the index of the selected sink
+get_default_sink_name() {
+    pacmd list-sinks |
+        awk '/index:/{i++} /* index:/{print i; exit}'
+}
+
+# Get the selected sink volume
+get_default_sink_volume() {
+    vol=$(pacmd list-sinks |
+        awk '/^\svolume:/{i++} i=='$(get_default_sink_name)'{print $5; exit}')
+    echo ${vol:0:${#vol}-1}
+}
+
+# Returns if default sink is muted (yes/no)
+get_default_sink_muted() {
+    pacmd list-sinks |
+        awk '/^\smuted:/{i++} i=='$(get_default_sink_name)'{print $2; exit}'
+}
+
+# Modify volume of the default sink
+if [[ $1 = 'mute' ]]; then
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+elif [[ $1 = 'up' ]]; then
+    if [[ $(get_default_sink_volume) -lt 100 ]]; then
+        pactl set-sink-volume @DEFAULT_SINK@ +5%
+    fi
+elif [[ $1 = 'down' ]]; then
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+fi

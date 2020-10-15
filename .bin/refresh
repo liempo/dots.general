@@ -1,0 +1,4 @@
+#! /bin/sh
+
+# Reload bspwmrc and relaunch polybar
+sh "$HOME/.config/bspwm/bspwmrc"
