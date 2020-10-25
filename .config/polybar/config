@@ -88,6 +88,7 @@ label-padding = 2
 
 [module/bspwm]
 type = internal/bspwm
+pin-workspaces = false
 format = <label-state>
 format-padding = 2
 index-sort = true
