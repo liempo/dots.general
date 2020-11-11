@@ -1,7 +1,8 @@
 
-![](.preview/wal.gif)
+![](.previews/wal.gif)
 # Liempo's Linux
-Hi there! I'm trying to make my Linux installation [unixporn](https://reddit.com/r/unixporn) material. This is a guide (for future me) to replicate things in case it breaks.
+Hi there! This is a rice that focus on minimalism and usability, nothing too fancy here.
+This is a guide (for future me) to replicate things in case it breaks.
 - **OS:** Arch Linux
 - **Window Manager:** bspwm
 - **Compositor:**: [ibhagwan's picom](https://github.com/sdhand/picom)
@@ -14,3 +15,4 @@ Hi there! I'm trying to make my Linux installation [unixporn](https://reddit.com
 - [owl4ce](https://github.com/owl4ce) for the inspiration.
 - [r/unixporn](https://www.reddit.com/r/unixporn/).
 - Some people in the forum who provide solutions.
+- Arch Wiki
