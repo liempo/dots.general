@@ -23,6 +23,8 @@ bindkey '^H' backward-char
 alias bt="bluetoothctl"
 alias ls="ls -l --block-size=M"
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias user-packages='comm -23 <(pacman -Qqett | sort) \
+    <(pacman -Qqg base-devel -g xorg | sort | uniq)'
 
 # Run 'ls' every 'cd'
 function chpwd() {
