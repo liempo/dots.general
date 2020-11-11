@@ -14,8 +14,8 @@ function run_once {
     fi
 }
 
-# Load wallpaper and display script before anything else
-sh ~/.screenlayout/detect.sh && sleep 0.5 && sh ~/.fehbg
+# Load wallpaper
+sh ~/.fehbg &
 
 # Bind super key to super + shift  + space
 # Which is bound to rofi in sxhkd

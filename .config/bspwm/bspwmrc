@@ -1,8 +1,8 @@
 #! /bin/sh
 
 # Set number of desktops per monitor
-bspc monitor DP-2 -n 0 -d                 Home Development
-bspc monitor LVDS-1 -n 1 -d               Media Extras
+bspc monitor DP2 -n 0 -d                 Home Development
+bspc monitor LVDS1 -n 1 -d               Media Extras
 bspc config border_width                  2
 
 # This creates negative padding equal to window gap so
