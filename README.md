@@ -1,7 +1,7 @@
 
 ![](.previews/wal.gif)
 # Liempo's Linux
-Hi there! This is a rice that focus on minimalism and usability, nothing too fancy here.
+Hi there! This is a rice that focus on minimalism and usability, nothing too fancy here.  
 This is a guide (for future me) to replicate things in case it breaks.
 - **OS:** Arch Linux
 - **Window Manager:** bspwm
