@@ -1,7 +1,6 @@
 
-<p align="center"><a name="top" href="https://github.com/liempo/dots"><img src="https://thumbs.gfycat.com/AccurateYawningAnchovy-size_restricted.gif" alt="Preview" align="center"></a></p>
-
-# <p align="center"> Liempo's Linux </p>
+![](.preview/wal.gif)
+# Liempo's Linux
 Hi there! I'm trying to make my Linux installation [unixporn](https://reddit.com/r/unixporn) material. This is a guide (for future me) to replicate things in case it breaks.
 - **OS:** Arch Linux
 - **Window Manager:** bspwm
