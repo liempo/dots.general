@@ -44,7 +44,7 @@ This is a guide (for future me) to replicate things in case it breaks.
     useradd -m -g users -G wheel -s /bin/zsh liempo
     passwd liempo
     ```
-7. RLogin to non-root user, install `yay`
+7. Login to non-root user, install `yay`
     ```
     git clone https://aur.archlinux.org/yay-bin.git
     cd yay-bin
@@ -72,7 +72,7 @@ This is a guide (for future me) to replicate things in case it breaks.
     autologin-user=username
     autologin-session=bspwm
     ```
-9. Reboot and debug hahaha
+9. Reboot and configure `bspwm` and `sxhkd` (Or [clone this repo](https://www.atlassian.com/git/tutorials/dotfiles))
 
 
 ### Credits / Thanks
